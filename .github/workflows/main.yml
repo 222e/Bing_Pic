@@ -3,6 +3,7 @@ name: 'GitHub Actions BingPicApi'
 on:
   branches: 
     - master
+  push:
   schedule:
     - cron: '0 0 * * *'
 jobs:
