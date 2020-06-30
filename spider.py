@@ -6,7 +6,7 @@ def GetPic():
     api = get(api_url)
     json_data = json.loads(api.text)
     pic_url = r'https://www.bing.com{0}'.format(json_data['images'][0]['url'])
-    start_date = json_data['images'][0]['enddate']
+    end_date = json_data['images'][0]['enddate']
     open(r'./json/{0}.json'.format(end_date), 'wb').write(api.content)
     print('Create Json Success!')
     pic = get(pic_url, stream=True)
