@@ -7,10 +7,11 @@ on:
   schedule:
     - cron: '0 16 * * *'
 
-
 jobs:
   Bing-spider:
     runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Shanghai    
     steps:
       - name: Checkout
         uses: actions/checkout@v2
